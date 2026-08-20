@@ -14,10 +14,10 @@ catalogue/
   reference.json
   roasteries/
     index.json
-    example-roastery/
+    daybreak-demo/
       index.json
       coffees/
-        example-coffee.json
+        monsoon-orchard.json
   recipes/
     index.json
     example-v60.json
@@ -40,5 +40,5 @@ node scripts/validate-catalog.mjs
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) before adding a roastery, coffee, or
-recipe. The records currently included are clearly marked examples and should
-be replaced with verified catalog data.
+recipe. The records currently included are fictional dummy data and should be
+replaced with verified catalog data.

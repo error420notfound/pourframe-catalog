@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../schemas/coffee.schema.json",
+  "schemaVersion": 1,
+  "id": "cocoa-ridge-natural",
+  "name": "Cocoa Ridge Natural",
+  "roasteryId": "ember-oak-demo",
+  "status": "archived",
+  "origin": { "country": "Colombia", "region": "Huila" },
+  "farm": "Demo Cocoa Ridge Farm",
+  "altitudeM": 1750,
+  "processing": ["Natural / dried"],
+  "roastLevel": "Medium",
+  "tastingNotes": ["Cocoa", "Cherry", "Hazelnut"],
+  "productUrl": "https://example.com/ember-oak-demo/cocoa-ridge-natural",
+  "source": { "url": "https://example.com/ember-oak-demo/cocoa-ridge-natural", "checkedAt": "2026-08-20" },
+  "updatedAt": "2026-08-20"
+}

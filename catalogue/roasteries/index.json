@@ -2,10 +2,8 @@
   "$schema": "../../schemas/roasteries-index.schema.json",
   "schemaVersion": 1,
   "roasteries": [
-    {
-      "id": "example-roastery",
-      "name": "Example Roastery",
-      "path": "roasteries/example-roastery/index.json"
-    }
+    { "id": "daybreak-demo", "name": "Daybreak Demo Roasters", "path": "roasteries/daybreak-demo/index.json" },
+    { "id": "northline-demo", "name": "Northline Demo Coffee", "path": "roasteries/northline-demo/index.json" },
+    { "id": "ember-oak-demo", "name": "Ember & Oak Demo Roastery", "path": "roasteries/ember-oak-demo/index.json" }
   ]
 }

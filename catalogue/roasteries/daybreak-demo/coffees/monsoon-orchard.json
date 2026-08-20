@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../schemas/coffee.schema.json",
+  "schemaVersion": 1,
+  "id": "monsoon-orchard",
+  "name": "Monsoon Orchard",
+  "roasteryId": "daybreak-demo",
+  "status": "available",
+  "origin": { "country": "India", "region": "Karnataka" },
+  "farm": "Demo Orchard Estate",
+  "altitudeM": 1450,
+  "processing": ["Washed"],
+  "roastLevel": "Medium-light",
+  "tastingNotes": ["Orange", "Caramel", "Cacao nib"],
+  "productUrl": "https://example.com/daybreak-demo/monsoon-orchard",
+  "source": { "url": "https://example.com/daybreak-demo/monsoon-orchard", "checkedAt": "2026-08-20" },
+  "updatedAt": "2026-08-20"
+}

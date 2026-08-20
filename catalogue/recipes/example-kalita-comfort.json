@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schemas/recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "example-kalita-comfort",
+  "name": "Example Kalita Comfort",
+  "dripper": "Kalita 185",
+  "coffee": 22,
+  "water": 330,
+  "ratio": 15,
+  "grind": "Medium",
+  "bloom": 65,
+  "poursAfterBloom": 4,
+  "brewTime": 190,
+  "flowRate": 4.2,
+  "temperature": 93,
+  "agitation": "No additional agitation",
+  "equipment": ["Kalita 185", "Wave filter", "Gooseneck kettle"],
+  "notes": "Dummy recipe with a round, sweet profile.",
+  "serveStyle": "hot",
+  "source": { "name": "PourFrame example", "url": "https://github.com/error420notfound/pourframe-catalog" },
+  "publishedAt": "2026-08-20",
+  "updatedAt": "2026-08-20"
+}
