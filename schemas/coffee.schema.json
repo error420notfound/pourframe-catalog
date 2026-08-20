@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://error420notfound.github.io/pourframe-catalog/schemas/coffee.schema.json",
+  "title": "PourFrame coffee",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "name", "roasteryId", "status", "source", "updatedAt"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "roasteryId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "status": { "enum": ["available", "seasonal", "archived", "unknown"] },
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "country": { "type": "string", "maxLength": 80 },
+        "region": { "type": "string", "maxLength": 120 }
+      }
+    },
+    "farm": { "type": "string", "maxLength": 120 },
+    "altitudeM": { "type": "number", "minimum": 0, "maximum": 5000 },
+    "processing": { "type": "array", "maxItems": 5, "items": { "type": "string", "maxLength": 80 } },
+    "roastLevel": { "enum": ["Light", "Medium-light", "Medium", "Medium-dark", "Dark"] },
+    "tastingNotes": { "type": "array", "maxItems": 10, "items": { "type": "string", "maxLength": 80 } },
+    "productUrl": { "type": "string", "format": "uri" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "checkedAt"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "checkedAt": { "type": "string", "format": "date" }
+      }
+    },
+    "updatedAt": { "type": "string", "format": "date" }
+  }
+}

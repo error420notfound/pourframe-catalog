@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "roastLevels": ["Light", "Medium-light", "Medium", "Medium-dark", "Dark"],
+  "grindSizes": ["Fine", "Medium-fine", "Medium", "Medium-coarse", "Coarse"],
+  "serveStyles": ["hot", "iced"],
+  "coffeeStatuses": ["available", "seasonal", "archived", "unknown"]
+}

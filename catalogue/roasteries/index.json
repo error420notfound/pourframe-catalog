@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/roasteries-index.schema.json",
+  "schemaVersion": 1,
+  "roasteries": [
+    {
+      "id": "example-roastery",
+      "name": "Example Roastery",
+      "path": "roasteries/example-roastery/index.json"
+    }
+  ]
+}

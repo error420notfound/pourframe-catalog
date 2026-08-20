@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://error420notfound.github.io/pourframe-catalog/schemas/recipe.schema.json",
+  "title": "PourFrame recipe",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "name", "dripper", "coffee", "water", "ratio", "grind", "bloom", "poursAfterBloom", "brewTime", "flowRate", "temperature", "agitation", "equipment", "notes", "serveStyle", "source", "publishedAt", "updatedAt"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "dripper": { "type": "string", "minLength": 1, "maxLength": 48 },
+    "coffee": { "type": "number", "minimum": 5, "maximum": 80 },
+    "water": { "type": "number", "minimum": 80, "maximum": 1200 },
+    "ratio": { "type": "number", "exclusiveMinimum": 0, "maximum": 30 },
+    "grind": { "enum": ["Fine", "Medium-fine", "Medium", "Medium-coarse", "Coarse"] },
+    "bloom": { "type": "number", "exclusiveMinimum": 0, "maximum": 1199 },
+    "poursAfterBloom": { "type": "integer", "minimum": 1, "maximum": 6 },
+    "brewTime": { "type": "number", "minimum": 90, "maximum": 420 },
+    "flowRate": { "type": "number", "minimum": 1, "maximum": 8 },
+    "temperature": { "type": "number", "minimum": 80, "maximum": 100 },
+    "agitation": { "type": "string", "maxLength": 120 },
+    "equipment": { "type": "array", "maxItems": 8, "items": { "type": "string", "minLength": 1, "maxLength": 64 } },
+    "notes": { "type": "string", "maxLength": 500 },
+    "serveStyle": { "enum": ["hot", "iced"] },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "publishedAt": { "type": "string", "format": "date" },
+    "updatedAt": { "type": "string", "format": "date" }
+  }
+}
