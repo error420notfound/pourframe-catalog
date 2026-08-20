@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schemas/recipes-index.schema.json",
+  "schemaVersion": 1,
+  "recipes": [
+    {
+      "id": "example-v60",
+      "name": "Example V60",
+      "dripper": "V60 02",
+      "serveStyle": "hot",
+      "path": "recipes/example-v60.json",
+      "publishedAt": "2026-08-20",
+      "updatedAt": "2026-08-20"
+    },
+    {
+      "id": "example-kalita-comfort",
+      "name": "Example Kalita Comfort",
+      "dripper": "Kalita 185",
+      "serveStyle": "hot",
+      "path": "recipes/example-kalita-comfort.json",
+      "publishedAt": "2026-08-20",
+      "updatedAt": "2026-08-20"
+    },
+    {
+      "id": "example-v60-iced",
+      "name": "Example Iced V60",
+      "dripper": "V60 02",
+      "serveStyle": "iced",
+      "path": "recipes/example-v60-iced.json",
+      "publishedAt": "2026-08-20",
+      "updatedAt": "2026-08-20"
+    }
+  ]
+}

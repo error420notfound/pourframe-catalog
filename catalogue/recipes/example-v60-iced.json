@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schemas/recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "example-v60-iced",
+  "name": "Example Iced V60",
+  "dripper": "V60 02",
+  "coffee": 20,
+  "water": 300,
+  "ratio": 15,
+  "grind": "Medium-fine",
+  "bloom": 50,
+  "poursAfterBloom": 3,
+  "brewTime": 165,
+  "flowRate": 4,
+  "temperature": 94,
+  "agitation": "Gentle bloom swirl",
+  "equipment": ["V60 02", "Paper filter", "Gooseneck kettle", "Ice"],
+  "notes": "Dummy iced recipe; water is the total recipe water.",
+  "serveStyle": "iced",
+  "source": { "name": "PourFrame example", "url": "https://github.com/error420notfound/pourframe-catalog" },
+  "publishedAt": "2026-08-20",
+  "updatedAt": "2026-08-20"
+}

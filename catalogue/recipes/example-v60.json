@@ -1,0 +1,26 @@
+{
+  "$schema": "../../schemas/recipe.schema.json",
+  "schemaVersion": 1,
+  "id": "example-v60",
+  "name": "Example V60",
+  "dripper": "V60 02",
+  "coffee": 20,
+  "water": 320,
+  "ratio": 16,
+  "grind": "Medium-fine",
+  "bloom": 60,
+  "poursAfterBloom": 4,
+  "brewTime": 180,
+  "flowRate": 4.5,
+  "temperature": 94,
+  "agitation": "Gentle swirl after bloom",
+  "equipment": ["V60 02", "Paper filter", "Gooseneck kettle"],
+  "notes": "Example data for validating the catalog structure.",
+  "serveStyle": "hot",
+  "source": {
+    "name": "PourFrame example",
+    "url": "https://github.com/error420notfound/pourframe-catalog"
+  },
+  "publishedAt": "2026-08-20",
+  "updatedAt": "2026-08-20"
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PourFrame recipes index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "recipes"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "recipes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "dripper", "serveStyle", "path", "publishedAt", "updatedAt"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "dripper": { "type": "string", "minLength": 1, "maxLength": 48 },
+          "serveStyle": { "enum": ["hot", "iced"] },
+          "path": { "type": "string", "pattern": "^recipes/[a-z0-9-]+\\.json$" },
+          "publishedAt": { "type": "string", "format": "date" },
+          "updatedAt": { "type": "string", "format": "date" }
+        }
+      }
+    }
+  }
+}

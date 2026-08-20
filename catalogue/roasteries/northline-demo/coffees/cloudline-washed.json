@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../schemas/coffee.schema.json",
+  "schemaVersion": 1,
+  "id": "cloudline-washed",
+  "name": "Cloudline Washed",
+  "roasteryId": "northline-demo",
+  "status": "seasonal",
+  "origin": { "country": "Kenya", "region": "Kirinyaga" },
+  "farm": "Demo Cloudline Cooperative",
+  "altitudeM": 1850,
+  "processing": ["Washed"],
+  "roastLevel": "Light",
+  "tastingNotes": ["Blackcurrant", "Grapefruit", "Brown sugar"],
+  "productUrl": "https://example.com/northline-demo/cloudline-washed",
+  "source": { "url": "https://example.com/northline-demo/cloudline-washed", "checkedAt": "2026-08-20" },
+  "updatedAt": "2026-08-20"
+}
