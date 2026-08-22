@@ -1,8 +1,0 @@
-{
-  "$schema": "../../../schemas/roastery-index.schema.json",
-  "schemaVersion": 1,
-  "roastery": { "id": "northline-demo", "name": "Northline Demo Coffee", "country": "Kenya", "website": "https://example.com/northline-demo" },
-  "coffees": [
-    { "id": "cloudline-washed", "name": "Cloudline Washed", "status": "seasonal", "path": "roasteries/northline-demo/coffees/cloudline-washed.json", "updatedAt": "2026-08-20" }
-  ]
-}

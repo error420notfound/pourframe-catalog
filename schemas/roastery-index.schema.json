@@ -15,7 +15,13 @@
         "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
         "name": { "type": "string", "minLength": 1, "maxLength": 120 },
         "country": { "type": "string", "maxLength": 80 },
-        "website": { "type": "string", "format": "uri" }
+        "city": { "type": "string", "maxLength": 80 },
+        "website": { "type": "string", "format": "uri" },
+        "logoUrl": { "type": "string", "format": "uri" },
+        "instagram": { "type": "string", "pattern": "^@[A-Za-z0-9._]+$" },
+        "description": { "type": "string", "maxLength": 500 },
+        "active": { "type": "boolean" },
+        "sortOrder": { "type": "integer", "minimum": 0 }
       }
     },
     "coffees": {
@@ -27,8 +33,10 @@
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
           "name": { "type": "string", "minLength": 1, "maxLength": 120 },
-          "status": { "enum": ["available", "seasonal", "archived", "unknown"] },
+          "status": { "enum": ["available", "seasonal", "sold-out", "archived", "unknown"] },
           "path": { "type": "string", "pattern": "^roasteries/[a-z0-9-]+/coffees/[a-z0-9-]+\\.json$" },
+          "featured": { "type": "boolean" },
+          "sortOrder": { "type": "integer", "minimum": 0 },
           "updatedAt": { "type": "string", "format": "date" }
         }
       }
