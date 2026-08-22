@@ -1,0 +1,36 @@
+{
+  "$schema": "../../../schemas/roastery-index.schema.json",
+  "schemaVersion": 1,
+  "roastery": {
+    "id": "half-light",
+    "name": "Half Light Coffee Roasters",
+    "country": "India",
+    "city": "Jaipur",
+    "website": "https://halflightcoffee.com/",
+    "logoUrl": "https://halflightcoffee.com/cdn/shop/files/Half_Light_horizontal.png?v=1754412532&width=260",
+    "instagram": "@halflightcoffee_roasters",
+    "description": "Jaipur-based specialty coffee roaster sharing Indian coffees and home-brewing education.",
+    "active": true,
+    "sortOrder": 5
+  },
+  "coffees": [
+    {
+      "id": "salawara-washed",
+      "name": "Salawara Washed",
+      "status": "seasonal",
+      "path": "roasteries/half-light/coffees/salawara-washed.json",
+      "featured": true,
+      "sortOrder": 1,
+      "updatedAt": "2026-08-22"
+    },
+    {
+      "id": "halli-berri",
+      "name": "Halli Berri",
+      "status": "available",
+      "path": "roasteries/half-light/coffees/halli-berri.json",
+      "featured": true,
+      "sortOrder": 2,
+      "updatedAt": "2026-08-22"
+    }
+  ]
+}

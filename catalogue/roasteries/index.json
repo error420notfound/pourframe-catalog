@@ -2,8 +2,32 @@
   "$schema": "../../schemas/roasteries-index.schema.json",
   "schemaVersion": 1,
   "roasteries": [
-    { "id": "daybreak-demo", "name": "Daybreak Demo Roasters", "path": "roasteries/daybreak-demo/index.json" },
-    { "id": "northline-demo", "name": "Northline Demo Coffee", "path": "roasteries/northline-demo/index.json" },
-    { "id": "ember-oak-demo", "name": "Ember & Oak Demo Roastery", "path": "roasteries/ember-oak-demo/index.json" }
+    {
+      "id": "blue-tokai",
+      "name": "Blue Tokai Coffee Roasters",
+      "country": "India",
+      "city": "Mumbai",
+      "logoUrl": "https://bluetokaicoffee.com/cdn/shop/files/logo-footer.png?v=1688108473&width=360",
+      "path": "roasteries/blue-tokai/index.json",
+      "sortOrder": 4
+    },
+    {
+      "id": "half-light",
+      "name": "Half Light Coffee Roasters",
+      "country": "India",
+      "city": "Jaipur",
+      "logoUrl": "https://halflightcoffee.com/cdn/shop/files/Half_Light_horizontal.png?v=1754412532&width=260",
+      "path": "roasteries/half-light/index.json",
+      "sortOrder": 5
+    },
+    {
+      "id": "bili-hu",
+      "name": "Bili Hu Coffee",
+      "country": "India",
+      "city": "Noida",
+      "logoUrl": "https://bilihu.in/cdn/shop/files/2_b40d55c2-eeff-43bd-a09c-508b6c4e8a2a.png?v=1729758622&width=720",
+      "path": "roasteries/bili-hu/index.json",
+      "sortOrder": 6
+    }
   ]
 }

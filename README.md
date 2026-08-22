@@ -14,10 +14,10 @@ catalogue/
   reference.json
   roasteries/
     index.json
-    daybreak-demo/
+    blue-tokai/
       index.json
       coffees/
-        monsoon-orchard.json
+        salawara-estate.json
   recipes/
     index.json
     example-v60.json
@@ -40,5 +40,5 @@ node scripts/validate-catalog.mjs
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) before adding a roastery, coffee, or
-recipe. The records currently included are fictional dummy data and should be
-replaced with verified catalog data.
+recipe. Coffee records include source URLs and the date their public product
+information was checked. Recipe records are still fictional examples.

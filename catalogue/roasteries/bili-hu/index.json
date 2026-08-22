@@ -1,0 +1,36 @@
+{
+  "$schema": "../../../schemas/roastery-index.schema.json",
+  "schemaVersion": 1,
+  "roastery": {
+    "id": "bili-hu",
+    "name": "Bili Hu Coffee",
+    "country": "India",
+    "city": "Noida",
+    "website": "https://bilihu.in/",
+    "logoUrl": "https://bilihu.in/cdn/shop/files/2_b40d55c2-eeff-43bd-a09c-508b6c4e8a2a.png?v=1729758622&width=720",
+    "instagram": "@bili.hu.coffee",
+    "description": "Indian coffee roaster focused on approachable beans and straightforward home brewing.",
+    "active": true,
+    "sortOrder": 6
+  },
+  "coffees": [
+    {
+      "id": "aghora-estate",
+      "name": "Aghora Estate",
+      "status": "available",
+      "path": "roasteries/bili-hu/coffees/aghora-estate.json",
+      "featured": true,
+      "sortOrder": 1,
+      "updatedAt": "2026-08-22"
+    },
+    {
+      "id": "kalledevarapura-estate",
+      "name": "Kalledevarapura Estate",
+      "status": "available",
+      "path": "roasteries/bili-hu/coffees/kalledevarapura-estate.json",
+      "featured": true,
+      "sortOrder": 2,
+      "updatedAt": "2026-08-22"
+    }
+  ]
+}

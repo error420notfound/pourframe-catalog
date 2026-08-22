@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../schemas/coffee.schema.json",
+  "schemaVersion": 1,
+  "id": "kalledevarapura-estate",
+  "name": "Kalledevarapura Estate",
+  "roasteryId": "bili-hu",
+  "status": "available",
+  "origin": { "country": "India", "region": "Chikmagalur, Karnataka" },
+  "farm": "Kalledevarapura Estate",
+  "processing": ["Washed"],
+  "varieties": ["Arabica"],
+  "roastLevel": "Medium",
+  "tastingNotes": ["Chocolate", "Buttery mouthfeel", "Jaggery-like sweetness"],
+  "price": { "amount": 749, "currency": "INR" },
+  "bagSizeG": 250,
+  "productUrl": "https://bilihu.in/collections/single-origins/products/kalledevarapura-estate",
+  "imageUrl": "https://bilihu.in/cdn/shop/files/Kalledevarapura_Estate_afee435c-a528-46ef-b422-cda0bd73e25f.png?v=1774870491",
+  "featured": true,
+  "sortOrder": 2,
+  "description": "A washed, medium-roasted Arabica grown under shade in the Mullayanagiri region of Chikmagalur.",
+  "source": { "url": "https://bilihu.in/collections/single-origins/products/kalledevarapura-estate", "checkedAt": "2026-08-22" },
+  "updatedAt": "2026-08-22"
+}

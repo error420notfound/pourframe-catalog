@@ -1,8 +1,0 @@
-{
-  "$schema": "../../../schemas/roastery-index.schema.json",
-  "schemaVersion": 1,
-  "roastery": { "id": "ember-oak-demo", "name": "Ember & Oak Demo Roastery", "country": "Colombia", "website": "https://example.com/ember-oak-demo" },
-  "coffees": [
-    { "id": "cocoa-ridge-natural", "name": "Cocoa Ridge Natural", "status": "archived", "path": "roasteries/ember-oak-demo/coffees/cocoa-ridge-natural.json", "updatedAt": "2026-08-20" }
-  ]
-}

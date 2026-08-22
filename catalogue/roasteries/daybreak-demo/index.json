@@ -1,8 +1,0 @@
-{
-  "$schema": "../../../schemas/roastery-index.schema.json",
-  "schemaVersion": 1,
-  "roastery": { "id": "daybreak-demo", "name": "Daybreak Demo Roasters", "country": "India", "website": "https://example.com/daybreak-demo" },
-  "coffees": [
-    { "id": "monsoon-orchard", "name": "Monsoon Orchard", "status": "available", "path": "roasteries/daybreak-demo/coffees/monsoon-orchard.json", "updatedAt": "2026-08-20" }
-  ]
-}

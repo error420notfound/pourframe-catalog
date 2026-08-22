@@ -1,0 +1,36 @@
+{
+  "$schema": "../../../schemas/roastery-index.schema.json",
+  "schemaVersion": 1,
+  "roastery": {
+    "id": "blue-tokai",
+    "name": "Blue Tokai Coffee Roasters",
+    "country": "India",
+    "city": "Mumbai",
+    "website": "https://bluetokaicoffee.com/",
+    "logoUrl": "https://bluetokaicoffee.com/cdn/shop/files/logo-footer.png?v=1688108473&width=360",
+    "instagram": "@bluetokaicoffee",
+    "description": "Indian specialty coffee roaster offering freshly roasted single-estate Arabica coffees sourced from farms across India.",
+    "active": true,
+    "sortOrder": 4
+  },
+  "coffees": [
+    {
+      "id": "salawara-estate",
+      "name": "Salawara Estate",
+      "status": "available",
+      "path": "roasteries/blue-tokai/coffees/salawara-estate.json",
+      "featured": true,
+      "sortOrder": 1,
+      "updatedAt": "2026-08-22"
+    },
+    {
+      "id": "raxidi-lobo-estate",
+      "name": "Raxidi Lobo Estate",
+      "status": "sold-out",
+      "path": "roasteries/blue-tokai/coffees/raxidi-lobo-estate.json",
+      "featured": true,
+      "sortOrder": 2,
+      "updatedAt": "2026-08-22"
+    }
+  ]
+}
