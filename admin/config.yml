@@ -1,0 +1,1129 @@
+# Generated from schemas by npm run generate:cms. Do not hand-edit.
+backend:
+  name: github
+  repo: error420notfound/pourframe-catalog
+  branch: main
+  base_url: https://pourframe-catalog-auth.9h24z9jnfy.workers.dev
+  auth_endpoint: auth
+publish_mode: editorial_workflow
+site_url: https://error420notfound.github.io/pourframe-catalog/
+media_folder: media/uploads
+public_folder: /pourframe-catalog/media/uploads
+show_preview_links: false
+editor:
+  preview: false
+collections:
+  - name: roasteries
+    label: Roasteries
+    folder: content/roasteries
+    create: false
+    delete: false
+    extension: json
+    format: json
+    identifier_field: id
+    slug: "{{fields.id}}"
+    summary: "{{name}} ({{id}})"
+    editor:
+      preview: false
+    fields:
+      - name: id
+        label: Id
+        required: true
+        widget: string
+        pattern:
+          - ^(?!index$)[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Use a lowercase kebab-case ID; index is reserved.
+        hint: Permanent ID and filename. Existing IDs cannot be changed; saving enforces this.
+      - name: name
+        label: Name
+        required: true
+        widget: string
+        pattern:
+          - ^[\s\S]{1,120}$
+          - Value must match the catalog schema (format and length).
+      - name: country
+        label: Country
+        required: false
+        widget: string
+        pattern:
+          - ^[\s\S]{0,80}$
+          - Value must match the catalog schema (format and length).
+      - name: city
+        label: City
+        required: false
+        widget: string
+        pattern:
+          - ^[\s\S]{0,80}$
+          - Value must match the catalog schema (format and length).
+      - name: website
+        label: Website
+        required: false
+        widget: string
+        pattern:
+          - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+          - Enter an absolute source URL.
+      - name: logoUrl
+        label: Logo Url
+        required: false
+        widget: string
+        pattern:
+          - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+          - Enter an absolute source URL.
+      - name: instagram
+        label: Instagram
+        required: false
+        widget: string
+        pattern:
+          - ^@[A-Za-z0-9._]+$
+          - Value must match the catalog schema (format and length).
+      - name: description
+        label: Description
+        required: false
+        widget: text
+        pattern:
+          - ^[\s\S]{0,500}$
+          - Value must match the catalog schema (format and length).
+      - name: active
+        label: Active
+        required: false
+        widget: boolean
+        default: false
+      - name: sortOrder
+        label: Sort Order
+        required: false
+        widget: number
+        value_type: int
+        step: 1
+        min: 0
+  - name: coffees-bili-hu
+    label: Coffees · bili-hu
+    folder: catalogue/roasteries/bili-hu/coffees
+    create: true
+    delete: false
+    extension: json
+    format: json
+    identifier_field: id
+    slug: "{{fields.id}}"
+    summary: "{{name}} ({{id}})"
+    editor:
+      preview: false
+    fields:
+      - name: $schema
+        label: $schema
+        required: false
+        widget: hidden
+        default: ../../../../schemas/coffee.schema.json
+      - name: schemaVersion
+        label: Schema Version
+        required: true
+        widget: hidden
+        default: 1
+      - name: id
+        label: Id
+        required: true
+        widget: string
+        pattern:
+          - ^(?!index$)[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Use a lowercase kebab-case ID; index is reserved.
+        hint: Permanent ID and filename. Existing IDs cannot be changed; saving enforces this.
+      - name: name
+        label: Name
+        required: true
+        widget: string
+        pattern:
+          - ^[\s\S]{1,120}$
+          - Value must match the catalog schema (format and length).
+      - name: roasteryId
+        label: Roastery Id
+        required: true
+        widget: hidden
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Value must match the catalog schema (format and length).
+        default: bili-hu
+      - name: status
+        label: Status
+        required: true
+        widget: select
+        options: &a1
+          - available
+          - seasonal
+          - sold-out
+          - archived
+          - unknown
+      - name: origin
+        label: Origin
+        required: false
+        widget: object
+        fields:
+          - name: country
+            label: Country
+            required: false
+            widget: string
+            pattern:
+              - ^[\s\S]{0,80}$
+              - Value must match the catalog schema (format and length).
+          - name: region
+            label: Region
+            required: false
+            widget: string
+            pattern:
+              - ^[\s\S]{0,120}$
+              - Value must match the catalog schema (format and length).
+      - name: farm
+        label: Farm
+        required: false
+        widget: string
+        pattern:
+          - ^[\s\S]{0,120}$
+          - Value must match the catalog schema (format and length).
+      - name: altitudeM
+        label: Altitude M
+        required: false
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 0
+        max: 5000
+      - name: altitudeRangeM
+        label: Altitude Range M
+        required: false
+        widget: object
+        fields:
+          - name: min
+            label: Min
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+            max: 5000
+          - name: max
+            label: Max
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+            max: 5000
+      - name: processing
+        label: Processing
+        required: false
+        widget: list
+        default: []
+        max: 5
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: varieties
+        label: Varieties
+        required: false
+        widget: list
+        default: []
+        max: 8
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: roastLevel
+        label: Roast Level
+        required: false
+        widget: select
+        options: &a2
+          - Light
+          - Medium-light
+          - Medium
+          - Medium-dark
+          - Dark
+      - name: tastingNotes
+        label: Tasting Notes
+        required: false
+        widget: list
+        default: []
+        max: 10
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: price
+        label: Price
+        required: false
+        widget: object
+        fields:
+          - name: amount
+            label: Amount
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+          - name: currency
+            label: Currency
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: string
+            pattern:
+              - ^[A-Z]{3}$
+              - Value must match the catalog schema (format and length).
+      - name: bagSizeG
+        label: Bag Size G
+        required: false
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 0
+        hint: Must be greater than 0.
+      - name: productUrl
+        label: Product Url
+        required: false
+        widget: string
+        pattern:
+          - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+          - Enter an absolute source URL.
+      - name: imageUrl
+        label: Image Url
+        required: false
+        widget: string
+        pattern:
+          - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+          - Enter an absolute source URL.
+      - name: featured
+        label: Featured
+        required: false
+        widget: boolean
+        default: false
+      - name: sortOrder
+        label: Sort Order
+        required: false
+        widget: number
+        value_type: int
+        step: 1
+        min: 0
+      - name: description
+        label: Description
+        required: false
+        widget: text
+        pattern:
+          - ^[\s\S]{0,500}$
+          - Value must match the catalog schema (format and length).
+      - name: source
+        label: Source
+        required: true
+        widget: object
+        fields:
+          - name: url
+            label: Url
+            required: true
+            widget: string
+            pattern:
+              - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+              - Enter an absolute source URL.
+          - name: checkedAt
+            label: Checked At
+            required: true
+            widget: datetime
+            date_format: YYYY-MM-DD
+            time_format: false
+            picker_utc: true
+      - name: updatedAt
+        label: Updated At
+        required: true
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+  - name: coffees-blue-tokai
+    label: Coffees · blue-tokai
+    folder: catalogue/roasteries/blue-tokai/coffees
+    create: true
+    delete: false
+    extension: json
+    format: json
+    identifier_field: id
+    slug: "{{fields.id}}"
+    summary: "{{name}} ({{id}})"
+    editor:
+      preview: false
+    fields:
+      - name: $schema
+        label: $schema
+        required: false
+        widget: hidden
+        default: ../../../../schemas/coffee.schema.json
+      - name: schemaVersion
+        label: Schema Version
+        required: true
+        widget: hidden
+        default: 1
+      - name: id
+        label: Id
+        required: true
+        widget: string
+        pattern:
+          - ^(?!index$)[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Use a lowercase kebab-case ID; index is reserved.
+        hint: Permanent ID and filename. Existing IDs cannot be changed; saving enforces this.
+      - name: name
+        label: Name
+        required: true
+        widget: string
+        pattern:
+          - ^[\s\S]{1,120}$
+          - Value must match the catalog schema (format and length).
+      - name: roasteryId
+        label: Roastery Id
+        required: true
+        widget: hidden
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Value must match the catalog schema (format and length).
+        default: blue-tokai
+      - name: status
+        label: Status
+        required: true
+        widget: select
+        options: *a1
+      - name: origin
+        label: Origin
+        required: false
+        widget: object
+        fields:
+          - name: country
+            label: Country
+            required: false
+            widget: string
+            pattern:
+              - ^[\s\S]{0,80}$
+              - Value must match the catalog schema (format and length).
+          - name: region
+            label: Region
+            required: false
+            widget: string
+            pattern:
+              - ^[\s\S]{0,120}$
+              - Value must match the catalog schema (format and length).
+      - name: farm
+        label: Farm
+        required: false
+        widget: string
+        pattern:
+          - ^[\s\S]{0,120}$
+          - Value must match the catalog schema (format and length).
+      - name: altitudeM
+        label: Altitude M
+        required: false
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 0
+        max: 5000
+      - name: altitudeRangeM
+        label: Altitude Range M
+        required: false
+        widget: object
+        fields:
+          - name: min
+            label: Min
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+            max: 5000
+          - name: max
+            label: Max
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+            max: 5000
+      - name: processing
+        label: Processing
+        required: false
+        widget: list
+        default: []
+        max: 5
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: varieties
+        label: Varieties
+        required: false
+        widget: list
+        default: []
+        max: 8
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: roastLevel
+        label: Roast Level
+        required: false
+        widget: select
+        options: *a2
+      - name: tastingNotes
+        label: Tasting Notes
+        required: false
+        widget: list
+        default: []
+        max: 10
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: price
+        label: Price
+        required: false
+        widget: object
+        fields:
+          - name: amount
+            label: Amount
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+          - name: currency
+            label: Currency
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: string
+            pattern:
+              - ^[A-Z]{3}$
+              - Value must match the catalog schema (format and length).
+      - name: bagSizeG
+        label: Bag Size G
+        required: false
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 0
+        hint: Must be greater than 0.
+      - name: productUrl
+        label: Product Url
+        required: false
+        widget: string
+        pattern:
+          - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+          - Enter an absolute source URL.
+      - name: imageUrl
+        label: Image Url
+        required: false
+        widget: string
+        pattern:
+          - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+          - Enter an absolute source URL.
+      - name: featured
+        label: Featured
+        required: false
+        widget: boolean
+        default: false
+      - name: sortOrder
+        label: Sort Order
+        required: false
+        widget: number
+        value_type: int
+        step: 1
+        min: 0
+      - name: description
+        label: Description
+        required: false
+        widget: text
+        pattern:
+          - ^[\s\S]{0,500}$
+          - Value must match the catalog schema (format and length).
+      - name: source
+        label: Source
+        required: true
+        widget: object
+        fields:
+          - name: url
+            label: Url
+            required: true
+            widget: string
+            pattern:
+              - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+              - Enter an absolute source URL.
+          - name: checkedAt
+            label: Checked At
+            required: true
+            widget: datetime
+            date_format: YYYY-MM-DD
+            time_format: false
+            picker_utc: true
+      - name: updatedAt
+        label: Updated At
+        required: true
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+  - name: coffees-half-light
+    label: Coffees · half-light
+    folder: catalogue/roasteries/half-light/coffees
+    create: true
+    delete: false
+    extension: json
+    format: json
+    identifier_field: id
+    slug: "{{fields.id}}"
+    summary: "{{name}} ({{id}})"
+    editor:
+      preview: false
+    fields:
+      - name: $schema
+        label: $schema
+        required: false
+        widget: hidden
+        default: ../../../../schemas/coffee.schema.json
+      - name: schemaVersion
+        label: Schema Version
+        required: true
+        widget: hidden
+        default: 1
+      - name: id
+        label: Id
+        required: true
+        widget: string
+        pattern:
+          - ^(?!index$)[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Use a lowercase kebab-case ID; index is reserved.
+        hint: Permanent ID and filename. Existing IDs cannot be changed; saving enforces this.
+      - name: name
+        label: Name
+        required: true
+        widget: string
+        pattern:
+          - ^[\s\S]{1,120}$
+          - Value must match the catalog schema (format and length).
+      - name: roasteryId
+        label: Roastery Id
+        required: true
+        widget: hidden
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Value must match the catalog schema (format and length).
+        default: half-light
+      - name: status
+        label: Status
+        required: true
+        widget: select
+        options: *a1
+      - name: origin
+        label: Origin
+        required: false
+        widget: object
+        fields:
+          - name: country
+            label: Country
+            required: false
+            widget: string
+            pattern:
+              - ^[\s\S]{0,80}$
+              - Value must match the catalog schema (format and length).
+          - name: region
+            label: Region
+            required: false
+            widget: string
+            pattern:
+              - ^[\s\S]{0,120}$
+              - Value must match the catalog schema (format and length).
+      - name: farm
+        label: Farm
+        required: false
+        widget: string
+        pattern:
+          - ^[\s\S]{0,120}$
+          - Value must match the catalog schema (format and length).
+      - name: altitudeM
+        label: Altitude M
+        required: false
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 0
+        max: 5000
+      - name: altitudeRangeM
+        label: Altitude Range M
+        required: false
+        widget: object
+        fields:
+          - name: min
+            label: Min
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+            max: 5000
+          - name: max
+            label: Max
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+            max: 5000
+      - name: processing
+        label: Processing
+        required: false
+        widget: list
+        default: []
+        max: 5
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: varieties
+        label: Varieties
+        required: false
+        widget: list
+        default: []
+        max: 8
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: roastLevel
+        label: Roast Level
+        required: false
+        widget: select
+        options: *a2
+      - name: tastingNotes
+        label: Tasting Notes
+        required: false
+        widget: list
+        default: []
+        max: 10
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: false
+          default: ""
+          widget: string
+          pattern:
+            - ^[\s\S]{0,80}$
+            - Value must match the catalog schema (format and length).
+      - name: price
+        label: Price
+        required: false
+        widget: object
+        fields:
+          - name: amount
+            label: Amount
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: number
+            value_type: float
+            step: 0.01
+            min: 0
+          - name: currency
+            label: Currency
+            required: false
+            hint: Required when this optional object is filled in.
+            widget: string
+            pattern:
+              - ^[A-Z]{3}$
+              - Value must match the catalog schema (format and length).
+      - name: bagSizeG
+        label: Bag Size G
+        required: false
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 0
+        hint: Must be greater than 0.
+      - name: productUrl
+        label: Product Url
+        required: false
+        widget: string
+        pattern:
+          - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+          - Enter an absolute source URL.
+      - name: imageUrl
+        label: Image Url
+        required: false
+        widget: string
+        pattern:
+          - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+          - Enter an absolute source URL.
+      - name: featured
+        label: Featured
+        required: false
+        widget: boolean
+        default: false
+      - name: sortOrder
+        label: Sort Order
+        required: false
+        widget: number
+        value_type: int
+        step: 1
+        min: 0
+      - name: description
+        label: Description
+        required: false
+        widget: text
+        pattern:
+          - ^[\s\S]{0,500}$
+          - Value must match the catalog schema (format and length).
+      - name: source
+        label: Source
+        required: true
+        widget: object
+        fields:
+          - name: url
+            label: Url
+            required: true
+            widget: string
+            pattern:
+              - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+              - Enter an absolute source URL.
+          - name: checkedAt
+            label: Checked At
+            required: true
+            widget: datetime
+            date_format: YYYY-MM-DD
+            time_format: false
+            picker_utc: true
+      - name: updatedAt
+        label: Updated At
+        required: true
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+  - name: recipes
+    label: Recipes
+    folder: catalogue/recipes
+    create: true
+    delete: false
+    extension: json
+    format: json
+    identifier_field: id
+    slug: "{{fields.id}}"
+    summary: "{{name}} ({{id}})"
+    editor:
+      preview: false
+    fields:
+      - name: $schema
+        label: $schema
+        required: false
+        widget: hidden
+        default: ../../schemas/recipe.schema.json
+      - name: schemaVersion
+        label: Schema Version
+        required: true
+        widget: hidden
+        default: 1
+      - name: id
+        label: Id
+        required: true
+        widget: string
+        pattern:
+          - ^(?!index$)[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Use a lowercase kebab-case ID; index is reserved.
+        hint: Permanent ID and filename. Existing IDs cannot be changed; saving enforces this.
+      - name: name
+        label: Name
+        required: true
+        widget: string
+        pattern:
+          - ^[\s\S]{1,80}$
+          - Value must match the catalog schema (format and length).
+      - name: dripper
+        label: Dripper
+        required: true
+        widget: string
+        pattern:
+          - ^[\s\S]{1,48}$
+          - Value must match the catalog schema (format and length).
+      - name: coffee
+        label: Coffee
+        required: true
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 5
+        max: 80
+      - name: water
+        label: Water
+        required: true
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 80
+        max: 1200
+      - name: ratio
+        label: Ratio
+        required: true
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 0
+        max: 30
+        hint: Must be greater than 0.
+      - name: grind
+        label: Grind
+        required: true
+        widget: select
+        options: &a3
+          - Fine
+          - Medium-fine
+          - Medium
+          - Medium-coarse
+          - Coarse
+      - name: bloom
+        label: Bloom
+        required: true
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 0
+        max: 1199
+        hint: Must be greater than 0.
+      - name: poursAfterBloom
+        label: Pours After Bloom
+        required: true
+        widget: number
+        value_type: int
+        step: 1
+        min: 1
+        max: 6
+      - name: brewTime
+        label: Brew Time
+        required: true
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 90
+        max: 420
+      - name: flowRate
+        label: Flow Rate
+        required: true
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 1
+        max: 8
+      - name: temperature
+        label: Temperature
+        required: true
+        widget: number
+        value_type: float
+        step: 0.01
+        min: 80
+        max: 100
+      - name: agitation
+        label: Agitation
+        required: false
+        default: ""
+        widget: text
+        pattern:
+          - ^[\s\S]{0,120}$
+          - Value must match the catalog schema (format and length).
+      - name: equipment
+        label: Equipment
+        required: false
+        default: []
+        widget: list
+        max: 8
+        min: 0
+        field:
+          name: item
+          label: Item
+          required: true
+          widget: string
+          pattern:
+            - ^[\s\S]{1,64}$
+            - Value must match the catalog schema (format and length).
+      - name: notes
+        label: Notes
+        required: false
+        default: ""
+        widget: text
+        pattern:
+          - ^[\s\S]{0,500}$
+          - Value must match the catalog schema (format and length).
+      - name: serveStyle
+        label: Serve Style
+        required: true
+        widget: select
+        options: &a4
+          - hot
+          - iced
+      - name: source
+        label: Source
+        required: true
+        widget: object
+        fields:
+          - name: name
+            label: Name
+            required: true
+            widget: string
+            pattern:
+              - ^[\s\S]{1,120}$
+              - Value must match the catalog schema (format and length).
+          - name: url
+            label: Url
+            required: true
+            widget: string
+            pattern:
+              - ^[A-Za-z][A-Za-z0-9+.-]*:\S+$
+              - Enter an absolute source URL.
+      - name: publishedAt
+        label: Published At
+        required: true
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+      - name: updatedAt
+        label: Updated At
+        required: true
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+    filter:
+      field: $schema
+      value: ../../schemas/recipe.schema.json
+  - name: settings
+    label: Reference and version
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: reference
+        label: Reference vocabulary order
+        file: catalogue/reference.json
+        fields:
+          - name: schemaVersion
+            widget: hidden
+            default: 1
+          - name: roastLevels
+            label: Roast Levels
+            widget: list
+            default: *a2
+            min: 5
+            max: 5
+            hint: "Ordering only: keep each schema value exactly once. Vocabulary changes require a schema/code PR."
+            field:
+              name: value
+              widget: select
+              options: *a2
+          - name: grindSizes
+            label: Grind Sizes
+            widget: list
+            default: *a3
+            min: 5
+            max: 5
+            hint: "Ordering only: keep each schema value exactly once. Vocabulary changes require a schema/code PR."
+            field:
+              name: value
+              widget: select
+              options: *a3
+          - name: serveStyles
+            label: Serve Styles
+            widget: list
+            default: *a4
+            min: 2
+            max: 2
+            hint: "Ordering only: keep each schema value exactly once. Vocabulary changes require a schema/code PR."
+            field:
+              name: value
+              widget: select
+              options: *a4
+          - name: coffeeStatuses
+            label: Coffee Statuses
+            widget: list
+            default: *a1
+            min: 5
+            max: 5
+            hint: "Ordering only: keep each schema value exactly once. Vocabulary changes require a schema/code PR."
+            field:
+              name: value
+              widget: select
+              options: *a1
+      - name: version
+        label: Catalog release metadata
+        file: catalogue/version.json
+        fields:
+          - name: schemaVersion
+            label: Schema Version
+            required: true
+            widget: hidden
+            default: 1
+          - name: catalogVersion
+            label: Catalog Version
+            required: true
+            widget: string
+            pattern:
+              - ^\d+\.\d+\.\d+$
+              - Value must match the catalog schema (format and length).
+          - name: updatedAt
+            label: Updated At
+            required: true
+            widget: datetime
+            date_format: YYYY-MM-DD
+            time_format: false
+            picker_utc: true

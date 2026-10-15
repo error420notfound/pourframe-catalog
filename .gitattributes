@@ -1,0 +1,9 @@
+# Deterministic generated files and portable local validation.
+.gitattributes text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.md text eol=lf

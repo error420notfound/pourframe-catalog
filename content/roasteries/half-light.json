@@ -1,0 +1,12 @@
+{
+  "id": "half-light",
+  "name": "Half Light Coffee Roasters",
+  "country": "India",
+  "city": "Jaipur",
+  "website": "https://halflightcoffee.com/",
+  "logoUrl": "https://halflightcoffee.com/cdn/shop/files/Half_Light_horizontal.png?v=1754412532&width=260",
+  "instagram": "@halflightcoffee_roasters",
+  "description": "Jaipur-based specialty coffee roaster sharing Indian coffees and home-brewing education.",
+  "active": true,
+  "sortOrder": 5
+}

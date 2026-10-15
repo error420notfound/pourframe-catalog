@@ -1,0 +1,12 @@
+{
+  "id": "blue-tokai",
+  "name": "Blue Tokai Coffee Roasters",
+  "country": "India",
+  "city": "Mumbai",
+  "website": "https://bluetokaicoffee.com/",
+  "logoUrl": "https://bluetokaicoffee.com/cdn/shop/files/logo-footer.png?v=1688108473&width=360",
+  "instagram": "@bluetokaicoffee",
+  "description": "Indian specialty coffee roaster offering freshly roasted single-estate Arabica coffees sourced from farms across India.",
+  "active": true,
+  "sortOrder": 4
+}
